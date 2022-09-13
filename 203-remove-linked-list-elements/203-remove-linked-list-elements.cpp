@@ -13,8 +13,17 @@ public:
     ListNode* removeElements(ListNode* head, int val) {
      if(head==NULL)
          return NULL;
-        
-      ListNode* dummy=new ListNode(-1);
+      head->next=removeElements(head->next,val);
+      if(head->val==val){
+          ListNode* ans=head->next;
+          delete head;
+          return ans;
+      }  
+        else{
+            //head=head->next;
+            return head;
+        }
+     /* ListNode* dummy=new ListNode(-1);
       dummy->next=head;  
       ListNode* tail=dummy;
         
@@ -28,6 +37,6 @@ public:
               tail=tail->next;
           }
       } 
-        return dummy->next;
+        return dummy->next;*/
     }
 };
