@@ -15,14 +15,8 @@ class Solution {
                 
             for(int sp=i;sp<=2*n-i-1;sp++)
             {
-                cout<<" ";
+                cout<<"  ";
             }
-            for(int sp=i;sp<=2*n-i-1;sp++)
-            {
-                cout<<" ";
-            }
-            
-        
             
             for(int j=i;j>=1;j--){
              cout<<j<<" ";        
